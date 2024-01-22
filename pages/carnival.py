@@ -17,6 +17,7 @@
 
 from pages.home_page import HomePage
 from pages.cruise_search_page import CruiseSearchPage
+from pages.itinerary_page import ItineraryPage
 from utils.driver.browser_factory import BrowserFactory
 from config import URL
 
@@ -33,6 +34,7 @@ class Carnival:
         self._driver = BrowserFactory().get_driver()
         self.home = HomePage()
         self.cruise_search = CruiseSearchPage()
+        self.itinerary = ItineraryPage()
         self._driver.get(URL)
 
     def navigate_to(self, url):
@@ -49,3 +51,17 @@ class Carnival:
         """
         if self._driver:
             self._driver.quit()
+
+    def get_current_url(self):
+        """
+        Get the current URL of the web page.
+
+        Returns:
+            str: The current URL as a string.
+        """
+        return self._driver.current_url
+
+    def reload_page(self):
+        """This method refreshes the page by reloading it.
+        """
+        self._driver.refresh()

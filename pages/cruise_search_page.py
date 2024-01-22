@@ -25,3 +25,9 @@ class CruiseSearchPage(BasePage):
     def __init__(self) -> None:
         super().__init__()
         self._vacation_budget_button = [By.CSS_SELECTOR, "[data-testid='pricingFilterButton']"]
+        self._itinerary_link = [By.CSS_SELECTOR, "[data-testid*='cg-itinerary']"]
+
+    def click_on_itinerary_link(self):
+        """Click on the itinerary link.
+        """
+        self._driver.find_element(*self._itinerary_link).click()
