@@ -49,7 +49,11 @@ URL=
 
 # Documentation
 [pytest](https://docs.pytest.org/en/7.1.x/contents.html) - To create and execute the test cases.
+
 [Allure](https://allurereport.org/docs/pytest/) - To generate reports
+
 [Selenium](https://www.selenium.dev/documentation/) - To interact with the UI
+
 [xray](https://www.getxray.app/blog/xray-test-management-for-jira) - To generate reports on jira
+
 [Jira](https://rrrenjifo.atlassian.net/jira/software/c/projects/FR/boards/7) - to manage tkts.
