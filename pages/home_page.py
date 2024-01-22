@@ -26,3 +26,15 @@ class HomePage(BasePage):
     def __init__(self) -> None:
         super().__init__()
         self._sail_to_button = [By.CSS_SELECTOR, "#cdc-destinations"]
+        self._search_cruises_button = [By.CSS_SELECTOR, ".cdc-filters-tab--searchcta"]
+        self._cookie_policy_close_button = [By.CSS_SELECTOR, "#cookie-consent-btn"]
+
+    def click_on_search_button(self):
+        """Clicks on the 'Search Cruises' button.
+        """
+        self._driver.find_element(*self._search_cruises_button).click()
+
+    def close_cookie_policy(self):
+        """Close the cookie policy popup
+        """
+        self._driver.find_element(*self._cookie_policy_close_button).click()
