@@ -16,6 +16,7 @@
 
 
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver import ActionChains
 from utils.driver.browser_factory import BrowserFactory
 from config import WAIT_TIMEOUT
 
@@ -25,5 +26,6 @@ class BasePage:
     """
     def __init__(self) -> None:
         self._driver = BrowserFactory().get_driver()
+        self.action_chains = ActionChains(self._driver)
         self._wait = WebDriverWait(self._driver, WAIT_TIMEOUT)
         

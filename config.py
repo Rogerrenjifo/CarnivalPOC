@@ -20,7 +20,7 @@ from os import getenv
 BROWSER = getenv("BROWSER", "EDGE")
 
 # timeouts
-IMPLICIT_TIMEOUT = int(getenv("IMPLICIT_TIMEOUT", "30"))
+IMPLICIT_TIMEOUT = int(getenv("IMPLICIT_TIMEOUT", "50"))
 WAIT_TIMEOUT = int(getenv("WAIT_TIMEOUT", "10"))
 
 # url

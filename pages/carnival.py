@@ -49,3 +49,17 @@ class Carnival:
         """
         if self._driver:
             self._driver.quit()
+
+    def get_current_url(self):
+        """
+        Get the current URL of the web page.
+
+        Returns:
+            str: The current URL as a string.
+        """
+        return self._driver.current_url
+
+    def reload_page(self):
+        """This method refreshes the page by reloading it.
+        """
+        self._driver.refresh()
